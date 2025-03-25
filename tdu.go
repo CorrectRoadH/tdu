@@ -25,6 +25,7 @@
 package tdu
 
 import (
+	"errors"
 	"flag"
 	"fmt"
 	"io/ioutil"
@@ -872,6 +873,12 @@ func Stat(path string) (total_size int64, total_items int64, err error) {
 	start := time.Now()
 	sc := newScanStruct(start, sys)
 	var fi []file
-	t, _ := scan(sc, &fi, path, 1) // Step 2
+	t, err := scan(sc, &fi, path, 1) // Step 2
+	if err != nil {
+		return 0, 0, err
+	}
+	if t == nil {
+		return 0, 0, errors.New("t is nil")
+	}
 	return t.size, t.items, nil
 }
