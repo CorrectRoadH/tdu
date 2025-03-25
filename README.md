@@ -51,7 +51,7 @@ Usage: tdu [options] [directory]
 
 ## Project information:
 - Author:   Joseph Paul
-- Homepage: https://github.com/josephpaul0/tdu
+- Homepage: https://github.com/CorrectRoadH/tdu
 - License:  GNU General Public Licence version 2.
 
 ## Screenshot

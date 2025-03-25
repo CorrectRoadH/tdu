@@ -3,7 +3,7 @@ package tdu_test
 import (
 	"testing"
 
-	"github.com/josephpaul0/tdu"
+	"github.com/CorrectRoadH/tdu"
 	"github.com/stretchr/testify/assert"
 )
 

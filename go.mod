@@ -1,4 +1,4 @@
-module github.com/josephpaul0/tdu
+module github.com/CorrectRoadH/tdu
 
 go 1.10
 
