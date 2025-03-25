@@ -22,7 +22,7 @@
  * similar to the 'du -skx' command from GNU Coreutils package.
  */
 
-package main
+package tdu
 
 import (
 	"flag"
@@ -865,4 +865,13 @@ func main() {
 	ncduEnd(sc)
 	showElapsed(sc)
 	osEnd(sys)
+}
+
+func Stat(path string) (total_size int64, total_items int64, err error) {
+	_, sys := osInit()
+	start := time.Now()
+	sc := newScanStruct(start, sys)
+	var fi []file
+	t, _ := scan(sc, &fi, path, 1) // Step 2
+	return t.size, t.items, nil
 }

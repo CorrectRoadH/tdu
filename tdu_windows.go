@@ -1,3 +1,4 @@
+//go:build windows
 // +build windows
 
 /* Top Disk Usage.
@@ -35,7 +36,7 @@
  * IN THE SOFTWARE.
  */
 
-package main
+package tdu
 
 import (
 	"fmt"

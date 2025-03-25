@@ -1,3 +1,4 @@
+//go:build linux || freebsd
 // +build linux freebsd
 
 /* Top Disk Usage.
@@ -10,7 +11,7 @@
  * (at your option) any later version.
  */
 
-package main
+package tdu
 
 import (
 	"bufio"

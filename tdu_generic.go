@@ -1,6 +1,5 @@
-// +build !linux
-// +build !windows
-// +build !freebsd
+//go:build !linux && !windows && !freebsd
+// +build !linux,!windows,!freebsd
 
 /* Top Disk Usage.
  * Copyright (C) 2019 Joseph Paul <joseph.paul1@gmx.com>
@@ -14,7 +13,7 @@
 
 /* Generic functions for non-Linux OS */
 
-package main
+package tdu
 
 import (
 	"fmt"
